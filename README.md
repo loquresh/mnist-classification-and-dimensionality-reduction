@@ -52,7 +52,7 @@ Each MNIST image is a 28 x 28 grid of pixel values. I flattened each image into 
 
 To keep computation manageable, trained on a stratified random subset of 15,000 images from the 60,000 available, which keeps the proportion of each digit the same as in the full set. The 10,000-image test set was left untouched during tuning and is used once at the end to compare the final models. All tuning used 5-fold stratified cross-validation within the training subset, with a fixed random seed so results are reproducible.
 
-![Sample digits](images/sample_digits.png)
+![Sample digits](images/mnst_plot_1.png)
 
 ### Classification
 
@@ -110,7 +110,7 @@ The RBF kernel SVM is the most accurate model at 97.3%, followed by KNN at 95.4%
 
 Prediction time moves in the opposite direction. The linear models predict the full test set in under a second, KNN takes about 9 seconds, and the RBF kernel SVM takes about 44. Prediction times were measured on a Colab CPU runtime.
 
-![Confusion matrices for all four models](images/confusion_matrices.png)
+![Confusion matrices for all four models](images/mnst_plot_2.png)
 
 The two linear models share the same weak spots. Digit 5 is the hardest, with recall of about 85%, and it is most often mistaken for 3 or 8. Digits 4 and 9 are confused in both directions: for logistic regression, 45 fours were predicted as nines and 43 nines as fours.
 
