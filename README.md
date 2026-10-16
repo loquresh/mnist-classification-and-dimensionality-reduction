@@ -85,9 +85,7 @@ For the RBF kernel SVM, `C` was tuned over 1, 3, and 10 with 5-fold cross-valida
 
 This is a large improvement over the linear models, which stopped at about 0.905. The RBF kernel lets the decision boundary curve in pixel space, and that flexibility is what separates the harder digit pairs. Scikit-learn's `SVC` trains one-vs-one classifiers internally, so this model uses a different multiclass scheme than the one-vs-rest linear models.
 
-#### k-nearest neighbors
-
-#### k-nearest neighbors
+#### K-nearest neighbors
 
 KNN classifies each image by a vote among its nearest training images, measured by Euclidean distance across all 784 pixels. The number of neighbors (1 to 15) and the weighting scheme (uniform or distance-weighted) were tuned with 5-fold cross-validation. The best setting was 3 neighbors with distance weighting, at a cross-validated accuracy of 0.9547. Five neighbors with distance weighting was nearly identical (0.9546).
 
