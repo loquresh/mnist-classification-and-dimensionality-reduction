@@ -24,8 +24,6 @@ Suppose we can draw samples from each $f_i$. To draw from $f_{\text{mix}}$:
 4. Draw $X \sim f_Z$, using a fresh draw that is independent of $U$.
 5. Return $X$.
 
-### Why this works
-
 The index $Z$ satisfies
 
 $$
